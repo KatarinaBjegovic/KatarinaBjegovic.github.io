@@ -115,7 +115,7 @@ function handleDrawOperationEvent(){
     drawVector(v1, "red");
     drawVector(v2, "blue");
 
-    var op = parseFloat(document.getElementById("op").value); 
+    var op = document.getElementById("op").value;
     if (op == "add") {
         v1.add(v2);
         drawVector(v1, "green");
