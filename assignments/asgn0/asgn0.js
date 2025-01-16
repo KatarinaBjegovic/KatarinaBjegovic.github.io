@@ -12,6 +12,9 @@ function main() {
     ctx.fillStyle = 'rgba(0, 0, 0, 1.0)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+    document.getElementById('draw_button').addEventListener('click', handleDrawEvent);
+    document.getElementById('draw_op').addEventListener('click', handleDrawOperationEvent);
+
 }
 
 function resetCanvas(){
@@ -28,7 +31,7 @@ function angleBetween(v1, v2){
     var mag1 = v1.magnitude();
     var mag2 = v2.magnitude();
     var cos_ang = d / (mag1 * mag2);
-    return Math.acos(cos_ang);
+    return Math.acos(cos_ang) * (180 / Math.PI);
 }
 
 function areaTriangle(v1, v2){
